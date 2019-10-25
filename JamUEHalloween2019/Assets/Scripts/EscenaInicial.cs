@@ -25,11 +25,11 @@ public class EscenaInicial : MonoBehaviour
     {
         if (juego)
         {
-            SceneManager.loadScene();
+            SceneManager.LoadScene();
         }
         if (controles)
         {
-            SceneManager.loadScene();
+            SceneManager.LoadScene();
         }
     }
 }
