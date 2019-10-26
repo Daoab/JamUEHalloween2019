@@ -19,7 +19,7 @@ public class MaquinaDeEscribir : MonoBehaviour
     List<string> playerInput = new List<string>();
     AudioSource audioSource;
     public bool writing = false;
-
+    public bool annoyed = false;
     bool shiftPressed = false;
 
     KeyCode lastKeyCode;
@@ -55,7 +55,7 @@ public class MaquinaDeEscribir : MonoBehaviour
 
     void Update()
     {
-        if (writing)
+        if (writing && !annoyed)
         {
             foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
             {
@@ -73,9 +73,8 @@ public class MaquinaDeEscribir : MonoBehaviour
                 shiftPressed = false;
 
             if (Input.GetKeyDown(KeyCode.Space)) Compare();
-
-            if (Input.GetKeyDown(KeyCode.Return)) onWritingEnd.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.Return)) onWritingEnd.Invoke();
     }
 
     void ProcessPlayerInput(string input)
