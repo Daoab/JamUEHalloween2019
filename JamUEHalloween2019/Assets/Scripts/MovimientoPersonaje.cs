@@ -55,5 +55,29 @@ public class MovimientoPersonaje : MonoBehaviour
             anim.SetBool("walk", true);
 
         }
+        if ((Input.GetKey(KeyCode.A))&& (Input.GetKey(KeyCode.W)))
+        {
+            transform.position = transform.position + new Vector3(-speed, 0f, speed) * Time.deltaTime; //Movimiento a la izquierda
+            transform.forward = Vector3.left + Vector3.forward;
+            anim.SetBool("walk", true);
+        }
+        if ((Input.GetKey(KeyCode.A)) && (Input.GetKey(KeyCode.S)))
+        {
+            transform.position = transform.position + new Vector3(-speed, 0f, -speed) * Time.deltaTime; //Movimiento a la izquierda
+            transform.forward = Vector3.left + Vector3.back;
+            anim.SetBool("walk", true);
+        }
+        if ((Input.GetKey(KeyCode.D)) && (Input.GetKey(KeyCode.W)))
+        {
+            transform.position = transform.position + new Vector3(speed, 0f, speed) * Time.deltaTime; //Movimiento a la izquierda
+            transform.forward = Vector3.right + Vector3.forward;
+            anim.SetBool("walk", true);
+        }
+        if ((Input.GetKey(KeyCode.D)) && (Input.GetKey(KeyCode.S)))
+        {
+            transform.position = transform.position + new Vector3(-speed, 0f, -speed) * Time.deltaTime; //Movimiento a la izquierda
+            transform.forward = Vector3.right + Vector3.back;
+            anim.SetBool("walk", true);
+        }
     }
 }
