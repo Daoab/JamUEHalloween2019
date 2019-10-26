@@ -20,6 +20,8 @@ public class MaquinaDeEscribir : MonoBehaviour
 
     KeyCode lastKeyCode;
 
+    public AudioClip sonidoTecleo;
+
     void Start()
     {
         LoadText(filename);
@@ -56,6 +58,7 @@ public class MaquinaDeEscribir : MonoBehaviour
             {
                 ProcessPlayerInput(vKey.ToString());
                 lastKeyCode = vKey;
+                EfectoTecleo.Sonido("tecla");
             }
         }
 
