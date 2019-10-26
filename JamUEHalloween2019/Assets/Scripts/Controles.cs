@@ -21,7 +21,7 @@ public class Controles : MonoBehaviour
     {
         if (juego)
         {
-            ScenManager.LoadScene(1);
+            SceneManager.LoadScene(1);
         }
     }
 }
