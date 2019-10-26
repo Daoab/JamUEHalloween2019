@@ -37,5 +37,9 @@ public class VignetteManager : MonoBehaviour
         vignette.intensity.Override(incrementedIntensity);
         if(incrementedIntensity < 1f)
             StartCoroutine(IncreaseVignette());
+        else
+        {
+            GameOver.EndGame();
+        }
     }
 }

@@ -138,7 +138,12 @@ public class MaquinaDeEscribir : MonoBehaviour
 
             playerText.text = previewText.text.Substring(0, previewText.text.Length - words[0].Length) + playerWord;
         }
-        
+
+        else
+        {
+            ProcessNumbers(input);
+        }
+
     }
 
     void ProcessQuote(string input)
@@ -197,6 +202,53 @@ public class MaquinaDeEscribir : MonoBehaviour
         }
     }
 
+    void ProcessNumbers(string input)
+    {
+        switch(input)
+        {
+            case "Alpha0":
+                playerInput.Add("0");
+                WritePlayerText("0");
+                break;
+            case "Alpha1":
+                playerInput.Add("1");
+                WritePlayerText("1");
+                break;
+            case "Alpha2":
+                playerInput.Add("2");
+                WritePlayerText("2");
+                break;
+            case "Alpha3":
+                playerInput.Add("3");
+                WritePlayerText("3");
+                break;
+            case "Alpha4":
+                playerInput.Add("4");
+                WritePlayerText("4");
+                break;
+            case "Alpha5":
+                playerInput.Add("5");
+                WritePlayerText("5");
+                break;
+            case "Alpha6":
+                playerInput.Add("6");
+                WritePlayerText("6");
+                break;
+            case "Alpha7":
+                playerInput.Add("7");
+                WritePlayerText("7");
+                break;
+            case "Alpha8":
+                playerInput.Add("8");
+                WritePlayerText("8");
+                break;
+            case "Alpha9":
+                playerInput.Add("9");
+                WritePlayerText("9");
+                break;
+        }
+    }
+
     void Compare()
     {
         string playerWord = "";
@@ -212,6 +264,9 @@ public class MaquinaDeEscribir : MonoBehaviour
             
             DeletePlayerInput();
             words.RemoveAt(0);
+
+            if (words.Count == 0) GameOver.EndGame();
+
             if (words[0] != null) previewText.text += words[0];
         }
 
