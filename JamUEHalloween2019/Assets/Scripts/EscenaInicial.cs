@@ -17,12 +17,10 @@ public class EscenaInicial : MonoBehaviour
     {
         if (juego)
         {
-            Debug.Log("Joder");
             SceneManager.LoadScene(1);
         }
         if (controles)
         {
-            Debug.Log("JJoder");
             SceneManager.LoadScene(2);
         }
         if (salir)
@@ -30,4 +28,5 @@ public class EscenaInicial : MonoBehaviour
             Application.Quit();
         }
     }
+
 }
