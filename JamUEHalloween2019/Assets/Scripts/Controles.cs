@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Controles : MonoBehaviour
 {
 
-    public bool juego;
+    public bool inicio;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,9 @@ public class Controles : MonoBehaviour
     }
     void OnMouseUp()
     {
-        if (juego)
+        if (inicio)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }
