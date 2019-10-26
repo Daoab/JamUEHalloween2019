@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using System.Text;
 using System.IO;
 
@@ -10,6 +11,7 @@ public class MaquinaDeEscribir : MonoBehaviour
     [SerializeField] Text playerText;
     [SerializeField] Text previewText;
     [SerializeField] Image paperImage;
+    [SerializeField] UnityEvent onWritingEnd;
 
     string filename = "./Assets/Text/texto.txt";
     List<string> words = new List<string>();
@@ -70,6 +72,8 @@ public class MaquinaDeEscribir : MonoBehaviour
                 shiftPressed = false;
 
             if (Input.GetKeyDown(KeyCode.Space)) Compare();
+
+            if (Input.GetKeyDown(KeyCode.Return)) onWritingEnd.Invoke();
         }
     }
 
@@ -239,11 +243,11 @@ public class MaquinaDeEscribir : MonoBehaviour
         DeletePlayerInput();
     }
 
-    public void startWriting()
+    public void startWriting(bool b)
     {
-        writing = true;
-        playerText.gameObject.SetActive(true);
-        previewText.gameObject.SetActive(true);
-        paperImage.gameObject.SetActive(true);
+        writing = b;
+        playerText.gameObject.SetActive(b);
+        previewText.gameObject.SetActive(b);
+        paperImage.gameObject.SetActive(b);
     }
 }
