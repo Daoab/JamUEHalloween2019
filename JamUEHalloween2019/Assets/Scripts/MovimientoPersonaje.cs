@@ -30,11 +30,13 @@ public class MovimientoPersonaje : MonoBehaviour
     }
     void movement()
     {
+        
         if (Input.GetKey(KeyCode.A))
         {
             transform.position = transform.position + new Vector3(-speed, 0f, 0f) * Time.deltaTime; //Movimiento a la izquierda
             transform.forward = Vector3.left;
             anim.SetBool("walk", true);
+            EfectoTecleo.Sonido("paso");
         }
         if (Input.GetKey(KeyCode.D))
         {
