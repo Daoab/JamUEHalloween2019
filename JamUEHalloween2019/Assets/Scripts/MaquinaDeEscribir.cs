@@ -12,6 +12,7 @@ public class MaquinaDeEscribir : MonoBehaviour
     [SerializeField] Text previewText;
     [SerializeField] Image paperImage;
     [SerializeField] UnityEvent onWritingEnd;
+    [SerializeField] Transform chairTransform;
 
     string filename = "./Assets/Text/texto.txt";
     List<string> words = new List<string>();

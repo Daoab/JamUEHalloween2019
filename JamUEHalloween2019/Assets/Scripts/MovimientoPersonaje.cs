@@ -7,6 +7,10 @@ public class MovimientoPersonaje : MonoBehaviour
     Animator anim;
     [SerializeField] float speed = 100f;
     [SerializeField] float maxSpeed = 20f;
+    [SerializeField] Transform chairTransform;
+    [SerializeField] Vector3 sitPosition;
+    [SerializeField] Vector3 getUpPosition;
+
     Rigidbody rigidBody;
     float xThrow;
     float yThrow;
@@ -105,5 +109,19 @@ public class MovimientoPersonaje : MonoBehaviour
     public void setWriting(bool b)
     {
         writing = b;
+        if(b)
+        {
+            anim.SetBool("sit", true);
+            transform.position = sitPosition;
+            transform.forward = chairTransform.up;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            anim.SetBool("sit", false);
+            anim.SetBool("walk", false);
+            GetComponent<BoxCollider>().enabled = true;
+            transform.position = getUpPosition;
+        }
     }
 }
