@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -310,10 +310,10 @@ RectTransform:
   m_Father: {fileID: 2075582170}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.32535452, y: 0.105694845}
-  m_AnchorMax: {x: 0.60060847, y: 0.30755875}
-  m_AnchoredPosition: {x: 1.6040039, y: -11}
-  m_SizeDelta: {x: -0.040000916, y: 24.171001}
+  m_AnchorMin: {x: 0.3598095, y: 0.08230517}
+  m_AnchorMax: {x: 0.63500005, y: 0.30755875}
+  m_AnchoredPosition: {x: 0.39999962, y: -8.5}
+  m_SizeDelta: {x: -0.040000916, y: 19.171001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228174721
 MonoBehaviour:
