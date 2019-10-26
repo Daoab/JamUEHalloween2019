@@ -51,6 +51,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Movement()
     {
+        Debug.Log(rigidBody.velocity.magnitude);
         Vector3 forwardMovement = calculateForwardMovement();
 
         float auxY = rigidBody.velocity.y;
