@@ -25,11 +25,11 @@ public class Findeljuego : MonoBehaviour
     {
         if (juego)
         {
-            SceneManager.LoadScene();
+            //SceneManager.LoadScene();
         }
         if (inicio)
         {
-            SceneManager.LoadScene();
+            //SceneManager.LoadScene();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
+using System.IO;
 //Attach this script to a GameObject.
 //Create a Text GameObject (Create>UI>Text) and attach it to the My Text field in the Inspector of your GameObject
 //Press the space bar in Play Mode to see the Text change.
@@ -10,6 +11,7 @@ using UnityEngine.UI;
 
 public class prueba : MonoBehaviour
 {
+    /*
     public Text m_MyText;
     public string escrito;
     public string[] texto;
@@ -115,7 +117,7 @@ public class prueba : MonoBehaviour
     {
         //unity shenanigans para borrar lo escrito hasta ahora
         escrito = "";
-    }
+    }*/
 
 }
 
