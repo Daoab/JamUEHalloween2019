@@ -46,6 +46,7 @@ public class MovimientoPersonaje : MonoBehaviour
             movementDir = new Vector3(xThrow, yThrow).normalized;
 
             Movement();
+            sentarse();
         }
     }
 
@@ -73,6 +74,17 @@ public class MovimientoPersonaje : MonoBehaviour
 
         if (rigidBody.velocity.magnitude > 0) anim.SetBool("walk", true);
         else anim.SetBool("walk", false);
+    }
+    void sentarse()
+    {
+        if (Input.GetKey(KeyCode.T))
+        {
+            anim.SetBool("sit", true);
+        }
+        if (Input.GetKey(KeyCode.Y))
+        {
+            anim.SetBool("sit", false);
+        }
     }
 
     Vector3 calculateForwardMovement()
