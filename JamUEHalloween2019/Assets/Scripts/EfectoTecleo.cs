@@ -9,8 +9,7 @@ public class EfectoTecleo : MonoBehaviour
 
     void Start()
     {
-        
-        audioTecleo = Resources.Load<AudioClip>("oof");//Le asigna al clip audioTecleo el .mp3 que usaremos para esta accion
+        audioTecleo = Resources.Load<AudioClip>("tecla");//Le asigna al clip audioTecleo el .mp3 que usaremos para esta accion
         audioSrc = GetComponent<AudioSource>();
     }
 
