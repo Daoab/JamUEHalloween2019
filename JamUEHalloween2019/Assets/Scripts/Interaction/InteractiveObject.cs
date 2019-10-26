@@ -27,9 +27,10 @@ public class InteractiveObject : MonoBehaviour
             canInteract = false;
     }
 
-    void Interaction()
+    public void Interaction()
     {
         if(canInteract)
+            Debug.Log(this);
             onInteraction.Invoke();
     }
 

@@ -17,6 +17,8 @@ public class MovimientoPersonaje : MonoBehaviour
     Vector3 cameraRight;
     Vector3 cameraForward;
 
+    public bool writing = false;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -33,15 +35,18 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Update()
     {
-        cameraForward = Vector3.ProjectOnPlane(camera.transform.forward, new Vector3(0, 1, 0)).normalized;
-        cameraRight = Vector3.ProjectOnPlane(camera.transform.right, new Vector3(0, 1, 0)).normalized;
+        if (!writing)
+        {
+            cameraForward = Vector3.ProjectOnPlane(camera.transform.forward, new Vector3(0, 1, 0)).normalized;
+            cameraRight = Vector3.ProjectOnPlane(camera.transform.right, new Vector3(0, 1, 0)).normalized;
 
-        xThrow = Input.GetAxisRaw("Horizontal");
-        yThrow = Input.GetAxisRaw("Vertical");
+            xThrow = Input.GetAxisRaw("Horizontal");
+            yThrow = Input.GetAxisRaw("Vertical");
 
-        movementDir = new Vector3(xThrow, yThrow).normalized;
+            movementDir = new Vector3(xThrow, yThrow).normalized;
 
-        Movement();
+            Movement();
+        }
     }
 
     void Movement()
@@ -83,5 +88,10 @@ public class MovimientoPersonaje : MonoBehaviour
 
         Vector3 forwardMovement = Vector3.ProjectOnPlane((movementDir.y * cameraForward), planeNormal);
         return forwardMovement;
+    }
+
+    public void setWriting(bool b)
+    {
+        writing = b;
     }
 }

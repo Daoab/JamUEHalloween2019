@@ -9,21 +9,21 @@ public class MaquinaDeEscribir : MonoBehaviour
 {
     [SerializeField] Text playerText;
     [SerializeField] Text previewText;
+    [SerializeField] Image paperImage;
 
     string filename = "./Assets/Text/texto.txt";
     List<string> words = new List<string>();
     List<string> playerInput = new List<string>();
-
-    bool writing = false;
+    AudioSource audioSource;
+    public bool writing = false;
 
     bool shiftPressed = false;
 
     KeyCode lastKeyCode;
 
-    public AudioClip sonidoTecleo;
-
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         LoadText(filename);
         playerText.text = "";
         previewText.text = "";
@@ -52,32 +52,35 @@ public class MaquinaDeEscribir : MonoBehaviour
 
     void Update()
     {
-        foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+        if (writing)
         {
-            if (Input.GetKeyDown(vKey))
+            foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
             {
-                ProcessPlayerInput(vKey.ToString());
-                lastKeyCode = vKey;
-                EfectoTecleo.Sonido("tecla");
+                if (Input.GetKeyDown(vKey))
+                {
+                    ProcessPlayerInput(vKey.ToString());
+                    lastKeyCode = vKey;
+                    audioSource.PlayOneShot(audioSource.clip);
+                }
             }
+
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+                shiftPressed = true;
+            else
+                shiftPressed = false;
+
+            if (Input.GetKeyDown(KeyCode.Space)) Compare();
         }
-
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            shiftPressed = true;
-        else
-            shiftPressed = false;
-
-        if (Input.GetKeyDown(KeyCode.Space)) Compare();
     }
 
     void ProcessPlayerInput(string input)
     {
         if(input.Length == 1) //Sabemos que es letra segura
         {
-            if(!shiftPressed) input = input.ToLower();
-
-            if (lastKeyCode.ToString() == "Quote") ProcessQuote(input);
-
+            if(!shiftPressed)
+                input = input.ToLower();
+            if (lastKeyCode.ToString() == "Quote")
+                ProcessQuote(input);
             else
             {
                 playerInput.Add(input);
@@ -234,5 +237,13 @@ public class MaquinaDeEscribir : MonoBehaviour
 
         playerText.text = newPlayertext;
         DeletePlayerInput();
+    }
+
+    public void startWriting()
+    {
+        writing = true;
+        playerText.gameObject.SetActive(true);
+        previewText.gameObject.SetActive(true);
+        paperImage.gameObject.SetActive(true);
     }
 }

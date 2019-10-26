@@ -22,8 +22,9 @@ public class Interactor : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Return))
         {
             if (closestInteractive.canInteract)
-                Debug.Log(closestInteractive);
-
+            {
+                closestInteractive.Interaction();
+            }
         }
 
     }
