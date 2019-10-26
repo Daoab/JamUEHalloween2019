@@ -111,10 +111,12 @@ public class MovimientoPersonaje : MonoBehaviour
         writing = b;
         if(b)
         {
+            anim.SetBool("walk", false);
             anim.SetBool("sit", true);
             transform.position = sitPosition;
             transform.forward = chairTransform.up;
             GetComponent<BoxCollider>().enabled = false;
+            rigidBody.constraints = RigidbodyConstraints.FreezePosition;
         }
         else
         {
@@ -122,6 +124,7 @@ public class MovimientoPersonaje : MonoBehaviour
             anim.SetBool("walk", false);
             GetComponent<BoxCollider>().enabled = true;
             transform.position = getUpPosition;
+            rigidBody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
         }
     }
 }
