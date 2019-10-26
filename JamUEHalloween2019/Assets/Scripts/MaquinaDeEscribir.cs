@@ -13,6 +13,7 @@ public class MaquinaDeEscribir : MonoBehaviour
     string filename = "./Assets/Text/texto.txt";
     List<string> words = new List<string>();
     List<string> playerInput = new List<string>();
+
     bool writing = false;
 
     bool shiftPressed = false;

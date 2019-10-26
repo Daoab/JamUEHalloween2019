@@ -272,8 +272,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2742926697351471755}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5246368970673387831}
@@ -1080,8 +1080,8 @@ GameObject:
   - component: {fileID: 5246368970673387831}
   - component: {fileID: 2757569707443409997}
   - component: {fileID: 987532993827706733}
-  - component: {fileID: 987532993827706734}
   - component: {fileID: 987532993827706735}
+  - component: {fileID: 846958139}
   m_Layer: 0
   m_Name: prota@Swagger Walk
   m_TagString: Untagged
@@ -1140,19 +1140,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &987532993827706734
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9121338528813845284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1794234, y: 0.36352667, z: 0.06990129}
-  m_Center: {x: -0.23997442, y: -0.00240543, z: -0.16293404}
 --- !u!114 &987532993827706735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1153,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+--- !u!65 &846958139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121338528813845284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11254712, y: 0.26591855, z: 0.079985164}
+  m_Center: {x: 0.0026991307, y: 0.12795074, z: 0.002930485}
 --- !u!1 &9127731943202471745
 GameObject:
   m_ObjectHideFlags: 0
