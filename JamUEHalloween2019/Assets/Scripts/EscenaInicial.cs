@@ -5,28 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class EscenaInicial : MonoBehaviour
 {
-    public bool juego;
-    public bool controles;
-    public bool salir;
-    // Start is called before the first frame update
     void Start()
     {
     }
 
-    void OnMouseUp ()
+    public void cambiaTutorial()
     {
-        if (juego)
-        {
-            SceneManager.LoadScene(1);
-        }
-        if (controles)
-        {
-            SceneManager.LoadScene(2);
-        }
-        if (salir)
-        {
-            Application.Quit();
-        }
+        SceneManager.LoadScene(2);
     }
+    public void cambiaJuego()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void salirJuego()
+    {
+        Application.Quit();
+    }
+    
 
 }

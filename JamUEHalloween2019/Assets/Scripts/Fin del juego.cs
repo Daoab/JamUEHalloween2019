@@ -6,23 +6,23 @@ using UnityEngine.SceneManagement;
 public class Findeljuego : MonoBehaviour
 {
 
-    public bool juego;
-    public bool inicio;
+   
     // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    void OnMouseUp()
+    public void volverAInicio()
     {
-        if (juego)
-        {
-            SceneManager.LoadScene(1);
-        }
-        if (inicio)
-        {
-            SceneManager.LoadScene(0);
-        }
+        SceneManager.LoadScene(0);
     }
+
+public void salirJuego()
+{
+    Application.Quit();
+}
+public void cambiaJuego()
+{
+    SceneManager.LoadScene(1);
+}
 }

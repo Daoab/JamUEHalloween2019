@@ -17,11 +17,8 @@ public class Controles : MonoBehaviour
     {
         
     }
-    void OnMouseUp()
-    {
-        if (inicio)
-        {
+    public void volverAInicio() { 
             SceneManager.LoadScene(0);
         }
     }
-}
+
