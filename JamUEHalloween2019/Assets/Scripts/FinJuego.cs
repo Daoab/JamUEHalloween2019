@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscenaInicial : MonoBehaviour
+public class FinJuego : MonoBehaviour
 {
+
     public bool juego;
-    public bool controles;
+    public bool inicio;
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
-    void OnMouseUp ()
+    void OnMouseUp()
     {
         if (juego)
         {
-            Debug.Log("Joder");
             SceneManager.LoadScene(1);
         }
-        if (controles)
+        if (inicio)
         {
-            Debug.Log("JJoder");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
     }
 }

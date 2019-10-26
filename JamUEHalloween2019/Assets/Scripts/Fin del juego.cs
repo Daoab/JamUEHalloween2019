@@ -5,31 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Findeljuego : MonoBehaviour
 {
-    private AssetBundle myLoadedAssetBundle;
-    private string[] scenePaths;
+
     public bool juego;
     public bool inicio;
     // Start is called before the first frame update
     void Start()
     {
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnMouseUp()
     {
         if (juego)
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene(1);
         }
         if (inicio)
         {
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene(0);
         }
     }
 }
