@@ -5,81 +5,83 @@ using UnityEngine;
 public class MovimientoPersonaje : MonoBehaviour
 {
     Animator anim;
-    public float speed;
-    // Start is called before the first frame update
+    [SerializeField] float speed = 100f;
+    [SerializeField] float maxSpeed = 20f;
+    Rigidbody rigidBody;
+    float xThrow;
+    float yThrow;
+    Vector2 movementDir;
+
+    Camera camera;
+
+    Vector3 cameraRight;
+    Vector3 cameraForward;
+
     void Start()
     {
+        rigidBody = GetComponent<Rigidbody>();
+
         anim = this.gameObject.GetComponent<Animator>();
+
         anim.gameObject.SetActive(true);
-        speed = 1f;
+
+        camera = FindObjectOfType<Camera>();
+
+        cameraForward = Vector3.ProjectOnPlane(camera.transform.forward, new Vector3(0, 1, 0)).normalized;
+        cameraRight = Vector3.ProjectOnPlane(camera.transform.right, new Vector3(0, 1, 0)).normalized;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        stop();
-        movement();
-    }
-    void stop()
-    {
-        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
-        {
-            anim.SetBool("walk", false);
+        cameraForward = Vector3.ProjectOnPlane(camera.transform.forward, new Vector3(0, 1, 0)).normalized;
+        cameraRight = Vector3.ProjectOnPlane(camera.transform.right, new Vector3(0, 1, 0)).normalized;
 
-        }
-    }
-    void movement()
-    {
-        
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position = transform.position + new Vector3(-speed, 0f, 0f) * Time.deltaTime; //Movimiento a la izquierda
-            transform.forward = Vector3.left;
-            anim.SetBool("walk", true);
-            EfectoTecleo.Sonido("paso");
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position = transform.position + new Vector3(speed, 0f, 0f) * Time.deltaTime; //Movimiento a la derecha
-            transform.forward = Vector3.right;
-            anim.SetBool("walk", true);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position = transform.position + new Vector3(0f, 0f, speed) * Time.deltaTime; //Movimiento hacia delante
-            transform.forward = Vector3.forward;
-            anim.SetBool("walk", true);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position = transform.position + new Vector3(0f, 0f, -speed) * Time.deltaTime; //Movimiento hacia atras
-            transform.forward = Vector3.back;
-            anim.SetBool("walk", true);
+        xThrow = Input.GetAxisRaw("Horizontal");
+        yThrow = Input.GetAxisRaw("Vertical");
 
-        }
-        if ((Input.GetKey(KeyCode.A))&& (Input.GetKey(KeyCode.W)))
+        movementDir = new Vector3(xThrow, yThrow).normalized;
+
+        Movement();
+    }
+
+    void Movement()
+    {
+        Vector3 forwardMovement = calculateForwardMovement();
+
+        float auxY = rigidBody.velocity.y;
+
+        rigidBody.velocity = ((movementDir.x * cameraRight).normalized + forwardMovement.normalized) * speed;
+
+        rigidBody.velocity = new Vector3(rigidBody.velocity.x, auxY, rigidBody.velocity.z);
+
+        if(rigidBody.velocity.magnitude > 0) transform.forward = rigidBody.velocity.normalized;
+
+        if (rigidBody.velocity.magnitude > maxSpeed)
         {
-            transform.position = transform.position + new Vector3(-speed, 0f, speed) * Time.deltaTime; //Movimiento a la izquierda
-            transform.forward = Vector3.left + Vector3.forward;
-            anim.SetBool("walk", true);
+            float offset = (rigidBody.velocity.magnitude - speed) / 2f;
+
+            rigidBody.velocity = new Vector3(rigidBody.velocity.x - offset * Mathf.Sign(rigidBody.velocity.x),
+                                             0f,
+                                             rigidBody.velocity.z - offset * Mathf.Sign(rigidBody.velocity.z));
         }
-        if ((Input.GetKey(KeyCode.A)) && (Input.GetKey(KeyCode.S)))
+
+        if (rigidBody.velocity.magnitude > 0) anim.SetBool("walk", true);
+        else anim.SetBool("walk", false);
+    }
+
+    Vector3 calculateForwardMovement()
+    {
+        RaycastHit hit;
+        Vector3 planeNormal = Vector3.zero;
+
+        int mask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1, mask))
         {
-            transform.position = transform.position + new Vector3(-speed, 0f, -speed) * Time.deltaTime; //Movimiento a la izquierda
-            transform.forward = Vector3.left + Vector3.back;
-            anim.SetBool("walk", true);
+            planeNormal = hit.normal;
         }
-        if ((Input.GetKey(KeyCode.D)) && (Input.GetKey(KeyCode.W)))
-        {
-            transform.position = transform.position + new Vector3(speed, 0f, speed) * Time.deltaTime; //Movimiento a la izquierda
-            transform.forward = Vector3.right + Vector3.forward;
-            anim.SetBool("walk", true);
-        }
-        if ((Input.GetKey(KeyCode.D)) && (Input.GetKey(KeyCode.S)))
-        {
-            transform.position = transform.position + new Vector3(-speed, 0f, -speed) * Time.deltaTime; //Movimiento a la izquierda
-            transform.forward = Vector3.right + Vector3.back;
-            anim.SetBool("walk", true);
-        }
+
+        Vector3 forwardMovement = Vector3.ProjectOnPlane((movementDir.y * cameraForward), planeNormal);
+        return forwardMovement;
     }
 }
