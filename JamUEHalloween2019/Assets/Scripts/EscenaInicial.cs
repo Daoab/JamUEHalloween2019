@@ -7,6 +7,7 @@ public class EscenaInicial : MonoBehaviour
 {
     public bool juego;
     public bool controles;
+    public bool salir;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class EscenaInicial : MonoBehaviour
         {
             Debug.Log("JJoder");
             SceneManager.LoadScene(2);
+        }
+        if (salir)
+        {
+            Application.Quit();
         }
     }
 }
