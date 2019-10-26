@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Controles : MonoBehaviour
 {
-    private AssetBundle myLoadedAssetBundle;
-    private string[] scenePaths;
+
     public bool juego;
     // Start is called before the first frame update
     void Start()
     {
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
     // Update is called once per frame
@@ -24,7 +21,7 @@ public class Controles : MonoBehaviour
     {
         if (juego)
         {
-            ScenManager.LoadScene();
+            ScenManager.LoadScene(1);
         }
     }
 }

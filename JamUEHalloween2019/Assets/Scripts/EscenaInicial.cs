@@ -5,31 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class EscenaInicial : MonoBehaviour
 {
-    private AssetBundle myLoadedAssetBundle;
-    private string[] scenePaths;
     public bool juego;
     public bool controles;
     // Start is called before the first frame update
     void Start()
     {
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void onMouseUp()
+    void OnMouseUp ()
     {
         if (juego)
         {
-            SceneManager.LoadScene();
+            Debug.Log("Joder");
+            SceneManager.LoadScene(1);
         }
         if (controles)
         {
-            SceneManager.LoadScene();
+            Debug.Log("JJoder");
+            SceneManager.LoadScene(2);
         }
     }
 }
