@@ -624,24 +624,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Querido lector, (\r\nAs\xED te cuento, bajo la luz de la luna y la mirada
-    inquisitiva de las estrellas, el peor d\xEDa de mi vida. S\xE9 que vendr\xE1n
-    pronto, as\xED que d\xE9monos prisa querido lector. (\r\nOcurri\xF3 en febrero
-    de 1915, en Gal\xEDpoli. Cruz\xE1bamos el estrecho de los Dardanelos en barcas
-    viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil que estas. Cada
-    latido de nuestros j\xF3venes corazones tra\xEDa una nueva remesa de desalentadoras
-    emociones acompa\xF1adas de los sonidos percusivos de la guerra en el fondo. (\r\nNuestras
-    botas pisaron la arena y el enjambre de metal comenz\xF3 su zumbido. Desgraciadamente
-    fui el \xFAnico en llegar a la trinchera, esa maldita zanja que marcar\xEDa mi
-    vida para siempre. All\xED, entre el barro y las algas, un zapador otomano se
-    tumbaba, estudiando nuestras fortificaciones. No pude luchar con la par\xE1lisis,
-    a\xFAn sabiendo cual era mi deber. El martillo de mi rifle interpretaba una marcha
-    f\xFAnebre movido por el temblor de mis manos. La detonaci\xF3n de un explosivo
-    en la distancia embot\xF3 mis sentidos y, aprovechando la reconfortante calidez
-    de la insensibilidad, dispar\xE9. El humo y la arena saltaron, ocultando mi pecado.
-    M\xE1s una maldita brisa tuvo la mala intenci\xF3n de pasar por all\xED, revelando
-    al j\xF3ven zapador convulsion\xE1ndose en el fango, con una gran fuente roja
-    creciendo en el pecho. (\r\n-Pierre Oscar Pyot-\r\n"
+  m_Text: 
 --- !u!222 &221911957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7048,24 +7031,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Querido lector, (\r\nAs\xED te cuento, bajo la luz de la luna y la mirada
-    inquisitiva de las estrellas, el peor d\xEDa de mi vida. S\xE9 que vendr\xE1n
-    pronto, as\xED que d\xE9monos prisa querido lector. (\r\nOcurri\xF3 en febrero
-    de 1915, en Gal\xEDpoli. Cruz\xE1bamos el estrecho de los Dardanelos en barcas
-    viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil que estas. Cada
-    latido de nuestros j\xF3venes corazones tra\xEDa una nueva remesa de desalentadoras
-    emociones acompa\xF1adas de los sonidos percusivos de la guerra en el fondo. (\r\nNuestras
-    botas pisaron la arena y el enjambre de metal comenz\xF3 su zumbido. Desgraciadamente
-    fui el \xFAnico en llegar a la trinchera, esa maldita zanja que marcar\xEDa mi
-    vida para siempre. All\xED, entre el barro y las algas, un zapador otomano se
-    tumbaba, estudiando nuestras fortificaciones. No pude luchar con la par\xE1lisis,
-    a\xFAn sabiendo cual era mi deber. El martillo de mi rifle interpretaba una marcha
-    f\xFAnebre movido por el temblor de mis manos. La detonaci\xF3n de un explosivo
-    en la distancia embot\xF3 mis sentidos y, aprovechando la reconfortante calidez
-    de la insensibilidad, dispar\xE9. El humo y la arena saltaron, ocultando mi pecado.
-    M\xE1s una maldita brisa tuvo la mala intenci\xF3n de pasar por all\xED, revelando
-    al j\xF3ven zapador convulsion\xE1ndose en el fango, con una gran fuente roja
-    creciendo en el pecho. (\r\n-Pierre Oscar Pyot-\r\n"
+  m_Text: 
 --- !u!222 &1475223470
 CanvasRenderer:
   m_ObjectHideFlags: 0
