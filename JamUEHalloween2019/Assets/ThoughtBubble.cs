@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ThoughtBubble : MonoBehaviour
 {
-    [SerializeField] GameObject thoughtBubblePosition;
     [SerializeField] float offsetX;
     [SerializeField] float offsetY;
     MovimientoPersonaje player;
@@ -18,8 +17,7 @@ public class ThoughtBubble : MonoBehaviour
 
     void Update()
     {
-        this.gameObject.transform.forward = (camera.transform.position - transform.position).normalized;
+        this.gameObject.transform.forward = (transform.position - camera.transform.position).normalized;
         this.transform.position = player.transform.position + new Vector3(offsetX, offsetY, 0f);
-        //transform.position = thoughtBubblePosition.transform.position;
     }
 }
