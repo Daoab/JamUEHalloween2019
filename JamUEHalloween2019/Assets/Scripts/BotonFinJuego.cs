@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinJuego : MonoBehaviour
+public class BotonFinJuego : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-    public void volverAInicio()
-    {
-        SceneManager.LoadScene(0);
     }
 
-    public void salirJuego()
+    // Update is called once per frame
+    void Update()
     {
-        Application.Quit();
+
+    }
+    public void irACreditos()
+    {
+        SceneManager.LoadScene(3);
     }
 }

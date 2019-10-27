@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -335,13 +335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 59a60ec2aa8726547bd249043056d805, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: acd11e53a27c6384cb861dea4b203a1d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -371,8 +371,8 @@ GameObject:
   - component: {fileID: 1292746155}
   - component: {fileID: 1292746154}
   - component: {fileID: 1292746153}
-  - component: {fileID: 1292746152}
   - component: {fileID: 1292746156}
+  - component: {fileID: 1292746152}
   - component: {fileID: 1292746157}
   m_Layer: 5
   m_Name: Button (1)
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292746150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39679b394d7bae046915d12b0cbda7bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 60e3fec886ec6e5418cb2348e4866a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1292746153
@@ -440,7 +440,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 23655cf2e47def2498484d2381d1d007,
+    m_HighlightedSprite: {fileID: 21300000, guid: 742718c59e3500945869f56d79d6683d,
       type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1292746152}
-        m_MethodName: volverAInicio
+        m_MethodName: irACreditos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51b5d5905d69d8047902d56e77211fef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8f3b31f42f1a454ab2e3412c045517b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
