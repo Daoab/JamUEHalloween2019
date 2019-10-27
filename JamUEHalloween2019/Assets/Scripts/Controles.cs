@@ -20,5 +20,13 @@ public class Controles : MonoBehaviour
     public void volverAInicio() { 
             SceneManager.LoadScene(0);
         }
+    public void enterBoton()
+    {
+        transform.localScale = new Vector3(1.2f, 1.2f);
+    }
+    public void salirBoton()
+    {
+        transform.localScale = new Vector3(1f, 1f);
+    }
     }
 
