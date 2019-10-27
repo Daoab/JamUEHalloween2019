@@ -279,7 +279,7 @@ public class MaquinaDeEscribir : MonoBehaviour
             DeletePlayerInput();
             words.RemoveAt(0);
 
-            if (words.Count == 0) GameOver.EndGame();
+            if (words.Count == 0) GameOver.EndGame(true);
 
             if (words[0] != null && words[0] != "(") previewText.text += words[0];
         }

@@ -5831,11 +5831,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8203517983586780530, guid: 9dcf5ba73d6c5704681b78997a3005ee,
-        type: 3}
-      propertyPath: vigentteIncrementPerTick
-      value: 0.0098039
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcf5ba73d6c5704681b78997a3005ee, type: 3}
 --- !u!1001 &904075047

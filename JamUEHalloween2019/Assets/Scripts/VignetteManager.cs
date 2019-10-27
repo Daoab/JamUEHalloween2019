@@ -24,12 +24,6 @@ public class VignetteManager : MonoBehaviour
         StartCoroutine(IncreaseVignette());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public IEnumerator IncreaseVignette()
     {
         yield return new WaitForSecondsRealtime(timeBetweenVignetteReductions);
@@ -39,7 +33,7 @@ public class VignetteManager : MonoBehaviour
             StartCoroutine(IncreaseVignette());
         else
         {
-            GameOver.EndGame();
+            GameOver.EndGame(false);
         }
     }
 }

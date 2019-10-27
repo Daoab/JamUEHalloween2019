@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public static void EndGame()
+    public static void EndGame(bool finishedWriting)
     {
-        SceneManager.LoadScene(3, LoadSceneMode.Single);
+        if(finishedWriting) SceneManager.LoadScene(4, LoadSceneMode.Single);
+        else SceneManager.LoadScene(5, LoadSceneMode.Single);
     }
 }
