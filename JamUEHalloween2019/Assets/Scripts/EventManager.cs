@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] float minTimeUntilNextAnnoyance = 120f;
     [SerializeField] float maxTimeUntilNextAnnoyance = 180f;
+    public bool annoyanceActive = false;
 
     void Start()
     {
@@ -20,15 +21,20 @@ public class EventManager : MonoBehaviour
         StartCoroutine(SpawnDeadSoldier());
     }
 
-    public void TriggerNextAnnoyanceWrapper()
+    public void setAnnoyanceActive(bool b)
     {
-        StartCoroutine(TriggerNextAnnoyance());
+        annoyanceActive = b;
     }
 
     public IEnumerator TriggerNextAnnoyance()
     {
         yield return new WaitForSecondsRealtime(Random.Range(minTimeUntilNextAnnoyance, maxTimeUntilNextAnnoyance));
-        annoyances[Random.Range(0, annoyances.Length)].TriggerAnnoyance();
+        if(!annoyanceActive)
+        {
+            annoyanceActive = true;
+            annoyances[Random.Range(0, annoyances.Length)].TriggerAnnoyance();
+        }
+        StartCoroutine(TriggerNextAnnoyance());
     }
 
     IEnumerator SpawnDeadSoldier()

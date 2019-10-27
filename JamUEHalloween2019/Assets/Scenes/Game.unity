@@ -304,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 5246368970673387831, guid: 955d7455aa12b784cac543846f540dba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5246368970673387831, guid: 955d7455aa12b784cac543846f540dba,
         type: 3}
@@ -448,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 2293068019444891619, guid: 9ae452ea45de6a446ae21b9c6d1fa330,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2293068019444891619, guid: 9ae452ea45de6a446ae21b9c6d1fa330,
         type: 3}
@@ -537,9 +537,9 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -561,7 +561,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 120.800995, y: 12.549988, z: -2.3909912}
 --- !u!4 &168404972 stripped
 Transform:
@@ -624,22 +624,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La primera discusi\xF3n, el primer desamor, la primera vez que pasas hambre.
-    Todos momentos odiosos, pero en mi caso hay uno peor: La primera vez que mat\xE9
-    a otro ser humano. Ocurri\xF3 en febrero de 1915, en Gal\xEDpoli. Cruz\xE1bamos
-    el estrecho en barcas viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil.
-    Cada latido de nuestros corazones tra\xEDa una nueva remesa de desalentadoras
-    emociones,  una m\xE1s intensa que la anterior.\r\nNuestras botas pisaron la arena
-    y el enjambre de metal comenz\xF3 su zumbido. Por desgracia, fui el \xFAnico que
-    lleg\xF3 a la trinchera, esa maldita zanja que me marcar\xEDa para siempre. All\xED,
-    entre el barro y  las algas, se tumababa un zapador otomano estudiando el b\xFAnker
-    aliado. A\xFAn sabiendo que ten\xEDa que hacer, no pude luchar la par\xE1lisis.
-    Mis manos temblaban, haciendo que el martillo de mi rifle interpretara una marcha
-    f\xFAnebre. Una bomba en la distancia embot\xF3 mis sentidos y, aprovechando la
-    c\xE1lida insensibilidad, dispar\xE9. El humo ocult\xF3 mi pecado y mis o\xEDdos
-    gritaron tras la detonaci\xF3n. Una maldita brisa despej\xF3 el ambiente, revelando
-    al joven zapador convulsion\xE1ndose en el fango, con una gran fuente roja en
-    el pecho.\r\n"
+  m_Text: "Querido lector, (\r\nAs\xED te cuento, bajo la luz de la luna y la mirada
+    inquisitiva de las estrellas, el peor d\xEDa de mi vida. S\xE9 que vendr\xE1n
+    pronto, as\xED que d\xE9monos prisa querido lector. (\r\nOcurri\xF3 en febrero
+    de 1915, en Gal\xEDpoli. Cruz\xE1bamos el estrecho de los Dardanelos en barcas
+    viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil que estas. Cada
+    latido de nuestros j\xF3venes corazones tra\xEDa una nueva remesa de desalentadoras
+    emociones acompa\xF1adas de los sonidos percusivos de la guerra en el fondo. (\r\nNuestras
+    botas pisaron la arena y el enjambre de metal comenz\xF3 su zumbido. Desgraciadamente
+    fui el \xFAnico en llegar a la trinchera, esa maldita zanja que marcar\xEDa mi
+    vida para siempre. All\xED, entre el barro y las algas, un zapador otomano se
+    tumbaba, estudiando nuestras fortificaciones. No pude luchar con la par\xE1lisis,
+    a\xFAn sabiendo cual era mi deber. El martillo de mi rifle interpretaba una marcha
+    f\xFAnebre movido por el temblor de mis manos. La detonaci\xF3n de un explosivo
+    en la distancia embot\xF3 mis sentidos y, aprovechando la reconfortante calidez
+    de la insensibilidad, dispar\xE9. El humo y la arena saltaron, ocultando mi pecado.
+    M\xE1s una maldita brisa tuvo la mala intenci\xF3n de pasar por all\xED, revelando
+    al j\xF3ven zapador convulsion\xE1ndose en el fango, con una gran fuente roja
+    creciendo en el pecho. (\r\n-Pierre Oscar Pyot-\r\n"
 --- !u!222 &221911957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -808,8 +810,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 936263163}
-        m_MethodName: TriggerNextAnnoyanceWrapper
-        m_Mode: 1
+        m_MethodName: setAnnoyanceActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5741,7 +5743,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &852054817 stripped
 GameObject:
@@ -5812,7 +5814,7 @@ PrefabInstance:
     - target: {fileID: 8203517983586780531, guid: 9dcf5ba73d6c5704681b78997a3005ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8203517983586780531, guid: 9dcf5ba73d6c5704681b78997a3005ee,
         type: 3}
@@ -5831,8 +5833,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8203517983586780530, guid: 9dcf5ba73d6c5704681b78997a3005ee,
         type: 3}
-      propertyPath: timeBetweenVignetteReductions
-      value: 5
+      propertyPath: vigentteIncrementPerTick
+      value: 0.0098039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcf5ba73d6c5704681b78997a3005ee, type: 3}
@@ -5891,7 +5893,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 11dde5c0a28d4ee42b616bed975a33ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 11dde5c0a28d4ee42b616bed975a33ba,
         type: 3}
@@ -5964,7 +5966,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &936263163
 MonoBehaviour:
@@ -5979,9 +5981,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadSoldier: {fileID: 363479126}
-  timeToDeadSoldier: 168
+  timeToDeadSoldier: 420
   minTimeUntilNextAnnoyance: 60
   maxTimeUntilNextAnnoyance: 90
+  annoyanceActive: 0
 --- !u!1 &941354045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6092,8 +6095,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 936263163}
-        m_MethodName: TriggerNextAnnoyanceWrapper
-        m_Mode: 1
+        m_MethodName: setAnnoyanceActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6224,7 +6227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  interactiveRadious: 2.3
+  interactiveRadious: 2.85
   onInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -6250,6 +6253,7 @@ GameObject:
   - component: {fileID: 1124306815}
   - component: {fileID: 1124306816}
   - component: {fileID: 1124306817}
+  - component: {fileID: 1124306818}
   m_Layer: 0
   m_Name: libro
   m_TagString: Untagged
@@ -6269,7 +6273,7 @@ Transform:
   m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 225, z: 0}
 --- !u!212 &1124306816
 SpriteRenderer:
@@ -6332,8 +6336,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6977d0d03d2890842b99732938f38680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 1.14
-  offsetY: 2.78
+  offsetX: -1.32
+  offsetY: 3.12
+--- !u!65 &1124306818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124306814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9, y: 4.7799997, z: 0.20000018}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1137664048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 178d8a3ba2755f849be8f94fb429b5df,
@@ -6370,8 +6387,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 936263163}
-        m_MethodName: TriggerNextAnnoyanceWrapper
-        m_Mode: 1
+        m_MethodName: setAnnoyanceActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6502,7 +6519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  interactiveRadious: 1.5
+  interactiveRadious: 2
   onInteraction:
     m_PersistentCalls:
       m_Calls:
@@ -6690,7 +6707,7 @@ Transform:
   - {fileID: 5006512736347461571}
   - {fileID: 5006512736302105317}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!65 &1324284503
 BoxCollider:
@@ -6729,6 +6746,7 @@ GameObject:
   - component: {fileID: 1430266919}
   - component: {fileID: 1430266920}
   - component: {fileID: 1430266921}
+  - component: {fileID: 1430266922}
   m_Layer: 0
   m_Name: reloj
   m_TagString: Untagged
@@ -6748,7 +6766,7 @@ Transform:
   m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 225, z: 0}
 --- !u!212 &1430266920
 SpriteRenderer:
@@ -6811,8 +6829,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6977d0d03d2890842b99732938f38680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 1.14
-  offsetY: 2.78
+  offsetX: -1.32
+  offsetY: 3.12
+--- !u!65 &1430266922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430266918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9, y: 4.7799997, z: 0.20000018}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1475223465
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,22 +7053,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La primera discusi\xF3n, el primer desamor, la primera vez que pasas hambre.
-    Todos momentos odiosos, pero en mi caso hay uno peor: La primera vez que mat\xE9
-    a otro ser humano. Ocurri\xF3 en febrero de 1915, en Gal\xEDpoli. Cruz\xE1bamos
-    el estrecho en barcas viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil.
-    Cada latido de nuestros corazones tra\xEDa una nueva remesa de desalentadoras
-    emociones,  una m\xE1s intensa que la anterior.\r\nNuestras botas pisaron la arena
-    y el enjambre de metal comenz\xF3 su zumbido. Por desgracia, fui el \xFAnico que
-    lleg\xF3 a la trinchera, esa maldita zanja que me marcar\xEDa para siempre. All\xED,
-    entre el barro y  las algas, se tumababa un zapador otomano estudiando el b\xFAnker
-    aliado. A\xFAn sabiendo que ten\xEDa que hacer, no pude luchar la par\xE1lisis.
-    Mis manos temblaban, haciendo que el martillo de mi rifle interpretara una marcha
-    f\xFAnebre. Una bomba en la distancia embot\xF3 mis sentidos y, aprovechando la
-    c\xE1lida insensibilidad, dispar\xE9. El humo ocult\xF3 mi pecado y mis o\xEDdos
-    gritaron tras la detonaci\xF3n. Una maldita brisa despej\xF3 el ambiente, revelando
-    al joven zapador convulsion\xE1ndose en el fango, con una gran fuente roja en
-    el pecho.\r\n"
+  m_Text: "Querido lector, (\r\nAs\xED te cuento, bajo la luz de la luna y la mirada
+    inquisitiva de las estrellas, el peor d\xEDa de mi vida. S\xE9 que vendr\xE1n
+    pronto, as\xED que d\xE9monos prisa querido lector. (\r\nOcurri\xF3 en febrero
+    de 1915, en Gal\xEDpoli. Cruz\xE1bamos el estrecho de los Dardanelos en barcas
+    viejas y endebles, armados de un valor tan o m\xE1s fr\xE1gil que estas. Cada
+    latido de nuestros j\xF3venes corazones tra\xEDa una nueva remesa de desalentadoras
+    emociones acompa\xF1adas de los sonidos percusivos de la guerra en el fondo. (\r\nNuestras
+    botas pisaron la arena y el enjambre de metal comenz\xF3 su zumbido. Desgraciadamente
+    fui el \xFAnico en llegar a la trinchera, esa maldita zanja que marcar\xEDa mi
+    vida para siempre. All\xED, entre el barro y las algas, un zapador otomano se
+    tumbaba, estudiando nuestras fortificaciones. No pude luchar con la par\xE1lisis,
+    a\xFAn sabiendo cual era mi deber. El martillo de mi rifle interpretaba una marcha
+    f\xFAnebre movido por el temblor de mis manos. La detonaci\xF3n de un explosivo
+    en la distancia embot\xF3 mis sentidos y, aprovechando la reconfortante calidez
+    de la insensibilidad, dispar\xE9. El humo y la arena saltaron, ocultando mi pecado.
+    M\xE1s una maldita brisa tuvo la mala intenci\xF3n de pasar por all\xED, revelando
+    al j\xF3ven zapador convulsion\xE1ndose en el fango, con una gran fuente roja
+    creciendo en el pecho. (\r\n-Pierre Oscar Pyot-\r\n"
 --- !u!222 &1475223470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7135,99 +7168,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 162.496, y: 45, z: -0.000015258789}
---- !u!1 &1633399450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1633399452}
-  - component: {fileID: 1633399451}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &1633399451
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633399450}
-  m_Enabled: 1
-  serializedVersion: 9
-  m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 6
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1633399452
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633399450}
-  m_LocalRotation: {x: -0.026077833, y: 0.8521949, z: -0.32061553, w: -0.41266143}
-  m_LocalPosition: {x: 7.11, y: 2.3, z: 11.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 34.609, y: -123.464005, z: 375.516}
 --- !u!1 &1708428722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,6 +7326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: perchero
       objectReference: {fileID: 0}
+    - target: {fileID: -7673886404300160364, guid: 23fa79c9c80d64949a7c01b24ef16638,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98909ca6e0a8f3f4f8c52889ade2b381, type: 2}
     - target: {fileID: -4216859302048453862, guid: 23fa79c9c80d64949a7c01b24ef16638,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7459,11 +7406,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 98909ca6e0a8f3f4f8c52889ade2b381, type: 2}
-    - target: {fileID: -7673886404300160364, guid: 23fa79c9c80d64949a7c01b24ef16638,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 98909ca6e0a8f3f4f8c52889ade2b381, type: 2}
     - target: {fileID: 4063835366044962077, guid: 23fa79c9c80d64949a7c01b24ef16638,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7491,6 +7433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770238813}
   - component: {fileID: 1770238812}
+  - component: {fileID: 1770238815}
   - component: {fileID: 1770238814}
   m_Layer: 0
   m_Name: cuervo
@@ -7560,7 +7503,7 @@ Transform:
   m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &1770238814
 MonoBehaviour:
@@ -7574,8 +7517,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6977d0d03d2890842b99732938f38680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 1.14
-  offsetY: 2.78
+  offsetX: -1.32
+  offsetY: 3.12
+--- !u!65 &1770238815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770238811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.8999996, y: 4.7799997, z: 0.20000018}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1826949882
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,7 +7592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1 &1832020347
 GameObject:
@@ -7763,7 +7719,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858528044
 GameObject:
@@ -7859,7 +7815,7 @@ RectTransform:
   - {fileID: 221911958}
   - {fileID: 1475223466}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7895,7 +7851,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1877860713
 MonoBehaviour:
@@ -7964,7 +7920,7 @@ PrefabInstance:
     - target: {fileID: 3992239782250099987, guid: 7b497600e85f4d74b9d852d729d3241c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3992239782250099987, guid: 7b497600e85f4d74b9d852d729d3241c,
         type: 3}
@@ -8259,7 +8215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2020589121 stripped
 MonoBehaviour:

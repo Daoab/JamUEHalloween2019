@@ -57,6 +57,15 @@ public class MaquinaDeEscribir : MonoBehaviour
     {
         if (writing && !annoyed)
         {
+            if (words[0] == "(")
+            {
+                words.RemoveAt(0);
+                playerText.text += "\n" + " ";
+                previewText.text += "\n" + " ";
+                previewText.text += words[0];
+                DeletePlayerInput();
+            }
+
             foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
             {
                 if (Input.GetKeyDown(vKey))
@@ -96,6 +105,12 @@ public class MaquinaDeEscribir : MonoBehaviour
         {
             playerInput.Add(",");
             WritePlayerText(",");
+        }
+
+        else if (input == "Minus")
+        {
+            playerInput.Add("-");
+            WritePlayerText("-");
         }
 
         else if(input == "Period")
@@ -266,7 +281,7 @@ public class MaquinaDeEscribir : MonoBehaviour
 
             if (words.Count == 0) GameOver.EndGame();
 
-            if (words[0] != null) previewText.text += words[0];
+            if (words[0] != null && words[0] != "(") previewText.text += words[0];
         }
 
         else

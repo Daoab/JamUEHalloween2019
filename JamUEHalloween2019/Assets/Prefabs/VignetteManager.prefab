@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenVignetteReductions: 5
-  vigentteIncrementPerTick: 0.00833
+  vigentteIncrementPerTick: 0.009259259
   startinVignette: 0
   postProcessingProfile: {fileID: 11400000, guid: 6abc51df6f718eb47a3e775e5d957739,
     type: 2}

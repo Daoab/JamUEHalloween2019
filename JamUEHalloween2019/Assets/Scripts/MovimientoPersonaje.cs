@@ -11,6 +11,8 @@ public class MovimientoPersonaje : MonoBehaviour
     [SerializeField] Vector3 sitPosition;
     [SerializeField] Vector3 getUpPosition;
 
+    ThoughtBubble[] thoughtBubbles;
+
     Rigidbody rigidBody;
     float xThrow;
     float yThrow;
@@ -25,6 +27,8 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Start()
     {
+        thoughtBubbles = FindObjectsOfType<ThoughtBubble>();
+
         rigidBody = GetComponent<Rigidbody>();
 
         anim = this.gameObject.GetComponent<Animator>();
