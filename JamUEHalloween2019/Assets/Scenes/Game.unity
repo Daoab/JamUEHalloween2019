@@ -691,6 +691,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: reloj_pendulo
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 178d8a3ba2755f849be8f94fb429b5df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8559460703565376411, guid: 178d8a3ba2755f849be8f94fb429b5df,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6122,7 +6127,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2383ca40714aa034db40d56baa987d0a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.365
+  m_Volume: 0.61
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8421,7 +8426,7 @@ PrefabInstance:
     - target: {fileID: 4993129848876321344, guid: 35a8cde9467500442b7e0384adf7cdb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8291251143237613651, guid: 35a8cde9467500442b7e0384adf7cdb1,
         type: 3}
@@ -8603,6 +8608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: escenario3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756614737655989485, guid: d68edcb88dcb0404183cc99a1aeb2a1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1160292249431537406, guid: d68edcb88dcb0404183cc99a1aeb2a1f,
         type: 3}
