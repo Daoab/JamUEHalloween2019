@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 
 public class EscenaInicial : MonoBehaviour
 {
-    public bool mouse_over;
-    public Material jugar, jugar2;
+
     void Start()
     {
     }
@@ -26,12 +25,12 @@ public class EscenaInicial : MonoBehaviour
     }
    public void cambioSpriteJugar()
     {
-        transform.localScale = new Vector3(1.2f, 1.2f);
+        //transform.localScale = new Vector3(1.2f, 1.2f);
      
     }
     public void botonFuera()
     {
-        transform.localScale = new Vector3(1f, 1f);
+        //transform.localScale = new Vector3(1f, 1f);
     }
 
 }

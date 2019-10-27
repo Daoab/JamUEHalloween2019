@@ -19,12 +19,4 @@ public class BotonFinJuego : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-    public void enterBoton()
-    {
-        transform.localScale = new Vector3(1.2f, 1.2f);
-    }
-    public void salirBoton()
-    {
-        transform.localScale = new Vector3(1f, 1f);
-    }
 }
